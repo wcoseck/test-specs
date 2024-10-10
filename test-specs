@@ -1,0 +1,41 @@
+// UNIT TESTS
+
+// (1.) a function called "multiplication" that returns the product of two input numbers
+
+// Expect the function multiplication to be a number (this one may vary)
+// Expect the function multiplication to be equal to a specific number (for example, 2 and 5 should only return 10 as a product)
+// Expect the function multiplication to be an error (either could be a wrong input (a letter instead of a number) (could also be an negative number that the program does not allow, a non-supported character, or a decimal that cannot be rounded or the programs simply doesn't take it))
+
+// (2.) a function called "concatOdds" takes two arrays of integers as arguments, it should return a single array that only contains the odd numbers, in ascending order, from both of the arrays.
+
+// Expect the function concatOdds [3, 2, 1], [9, 1, 1, 1, 4, 15, -1] to be the correct output [-1, 1, 3, 9, 15]
+// Expect the function concatOdds [3, 2, 1], [9, 1, 1, 1, 4, 15, -1] to be an error due to unsupported character in the array of integers only (example [3, 2, 1], [9, 1, 1, 1, 4, b, -1])
+// Expect the function concatOdds [3, 2, 1], [9, 1, 1, 1, 4, 15, -1] to be an array with no repeating numbers, it should trim the excess repeating integers
+// Expect the function concatOdds [3, 2, 1], [9, 1, 1, 1, 4, 15, -1] to be a combination of both arrays together and to be sorted out correctly, both arrays must be included (this one may only include ODD numbers)
+
+// actual js function:
+
+// function concatOdds(arr1, arr2) {
+// const combined = arr1.concat(arr2);
+// const oddNumbers = combined.filter(num => num % 2 !==0);
+// oddNumbers.sort((a, b) => a - b);
+// return oddNumbers;
+// }
+
+// const array1 = [3, 2, 1]
+// const array2 = [9, 1, 1, 1, 4, 15, -1]
+// const result = concatOdds(array1, array2)
+
+// FUNCTIONAL TESTS
+
+// (3.) a shopping cart checkout feature that allows the user to checkout as a guest, or as a logged in user.  They should be allowed to do either, but should be asked if they want to create an account of log in if the checkout as guest.
+
+// The user is prompted upon clicking the option of checking out their cart if they would like to continue as a guest or if they would like to create an account or log in if they already have an account
+// Upon signing in, the checkout menu should verify there are items in the cart if not, then they shall not be able to proceed with an empty cart - prompt them to new items to select from
+// The program should verify the items picked by the user are actually in stock, if they not they should be prompted with a different item or store to buy from
+// While checking out, the user should be prompted to choose between 3 options of completing their purchase (shipping, pick-up, delivery) afterwards they should enter their shipment information (address)
+// If the shipping information is incorrect the user should be asked to put their information again followed by an error
+// If the shipping information is correct and everything checks out, the user should be prompted for a form of payment (billing info)
+// If the payment information is incorrect the user should be asked to put their information again followed by an error
+// If the payment information is correct the user should be redirected with an order confirmation and a receipt with a thank you and an estimated time of arrival of their order.
+
